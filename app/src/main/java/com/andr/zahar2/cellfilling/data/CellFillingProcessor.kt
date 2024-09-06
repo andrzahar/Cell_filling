@@ -7,5 +7,5 @@ interface CellFillingProcessor {
 
     val cells: StateFlow<List<Cell>>
 
-    suspend fun create()
+    fun create()
 }
