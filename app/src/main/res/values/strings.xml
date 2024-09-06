@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cell filling</string>
+    <string name="title">Клеточное наполнение</string>
+    <string name="create_button">сотворить</string>
 </resources>
