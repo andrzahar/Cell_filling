@@ -8,4 +8,13 @@
     
     <color name="primary_color">#FF5A3472</color>
     <color name="status_bar_color">#5A3473</color>
+
+    <color name="dead_cell_emoji_background_gradient_start">#FF0D658A</color>
+    <color name="dead_cell_emoji_background_gradient_end">#FFB0FFB4</color>
+
+    <color name="alive_cell_emoji_background_gradient_start">#FFFFB800</color>
+    <color name="alive_cell_emoji_background_gradient_end">#FFFFF7B0</color>
+
+    <color name="life_cell_emoji_background_gradient_start">#FFAD00FF</color>
+    <color name="life_cell_emoji_background_gradient_end">#FFFFB0E9</color>
 </resources>
