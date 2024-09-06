@@ -50,6 +50,8 @@ dependencies {
     implementation(libs.viewmodel)
     implementation(libs.livedata)
 
+    implementation(libs.fragment)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
