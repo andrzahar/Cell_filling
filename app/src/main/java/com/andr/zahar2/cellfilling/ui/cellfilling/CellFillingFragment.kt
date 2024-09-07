@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.RecyclerView
 import com.andr.zahar2.cellfilling.databinding.FragmentCellFillingBinding
 import com.andr.zahar2.cellfilling.ui.cellfilling.list.CellsListAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,8 +33,20 @@ class CellFillingFragment: Fragment() {
 
         val adapter = CellsListAdapter(requireContext())
 
+        var itemsCount = 0
+
+        adapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
+            override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                super.onItemRangeInserted(positionStart, itemCount)
+                if (itemsCount > 0) {
+                    binding.list.smoothScrollToPosition(itemsCount - 1)
+                }
+            }
+        })
+
         viewModel.cellsList.observe(viewLifecycleOwner) {
             adapter.submitList(it)
+            itemsCount = it.size
         }
 
         with(binding) {
