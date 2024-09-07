@@ -23,9 +23,11 @@ class CellFillingProcessorImpl: CellFillingProcessor {
         CoroutineScope(Dispatchers.Default).launch {
             val newCell = if (Random.nextInt(0, 2) == 0) {
                 comboDeadCellsCounter++
+                comboAliveCellsCounter = 0
                 Cell.Dead()
             } else {
                 comboAliveCellsCounter++
+                comboDeadCellsCounter = 0
                 Cell.Alive()
             }
 
@@ -36,13 +38,13 @@ class CellFillingProcessorImpl: CellFillingProcessor {
                 }
             }
 
+            _cells.value += newCell
+
             if (comboAliveCellsCounter == 3) {
                 comboAliveCellsCounter = 0
                 lastLifeCell = Cell.Life()
                 _cells.value += lastLifeCell!!
             }
-
-            _cells.value += newCell
         }
     }
 }
