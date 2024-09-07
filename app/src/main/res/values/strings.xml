@@ -2,4 +2,16 @@
     <string name="app_name">Cell filling</string>
     <string name="title">Клеточное наполнение</string>
     <string name="create_button">сотворить</string>
+    
+    <string name="dead_cell_emoji">💀</string>
+    <string name="alive_cell_emoji">💥</string>
+    <string name="life_cell_emoji">🐣</string>
+
+    <string name="dead_cell_title">Мёртвая</string>
+    <string name="alive_cell_title">Живая</string>
+    <string name="life_cell_title">Жизнь</string>
+
+    <string name="dead_cell_description">или прикидывается</string>
+    <string name="alive_cell_description">и шевелится!</string>
+    <string name="life_cell_description">Ку-ку!</string>
 </resources>
