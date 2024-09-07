@@ -26,6 +26,7 @@ class CellFillingProcessorImpl: CellFillingProcessor {
                 comboAliveCellsCounter = 0
                 Cell.Dead()
             } else {
+                lastLifeCell = null
                 comboAliveCellsCounter++
                 comboDeadCellsCounter = 0
                 Cell.Alive()
@@ -35,6 +36,7 @@ class CellFillingProcessorImpl: CellFillingProcessor {
                 comboDeadCellsCounter = 0
                 lastLifeCell?.let {
                     _cells.value -= it
+                    lastLifeCell = null
                 }
             }
 
